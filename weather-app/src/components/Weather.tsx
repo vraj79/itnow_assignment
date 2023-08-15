@@ -6,6 +6,7 @@ interface WeatherProps {
 }
 
 const Weather: FC<WeatherProps> = ({ data }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const fahrenheit = (data.main.temp * 1.8 - 459.67).toFixed(2);
   const celsius = (data.main.temp - 273.15).toFixed(2);
 
@@ -31,11 +32,11 @@ const Weather: FC<WeatherProps> = ({ data }) => {
             <div>
               <p className="heading">temp</p>
               <div className="title">
-                <p className="mb-2">{data.main.temp}K</p>
+                {/* <p className="mb-2">{data.main.temp}K</p>
                 <p className="mb-2">
                   {fahrenheit}
                   <sup>&#8457;</sup>
-                </p>
+                </p> */}
                 <p>
                   {celsius}
                   <sup>&#8451;</sup>
